@@ -51,7 +51,15 @@ export const alex = {
     debilitated: false,
     dead: false,
   },
-  skills: [],
+  skills: [
+    {
+      name: "Test skills",
+      description: "just a bunch of junk to print here",
+      source: 'GF, 345',
+      stat: 'i',
+      training: 'p',
+    }
+  ],
   abilities: [
     {
       name: "Test ability",
