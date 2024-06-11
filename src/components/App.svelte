@@ -16,19 +16,21 @@
   });
 </script>
 
-<div class="flex gap-5">
-  <nav class="flex flex-col md:w-1/6">
-    {#each Object.keys(characters) as char}
-    <button class:active={char === active} on:click={() => loadCharacter(char)}>
-      {characters[char].name}
-    </button>
-  {/each}
-  </nav>
+<div class="flex justify-center w-full">
+  <div class="flex gap-5">
+    <nav class="flex flex-col md:min-w-48">
+      {#each Object.keys(characters) as char}
+      <button class:active={char === active} on:click={() => loadCharacter(char)}>
+        {characters[char].name}
+      </button>
+    {/each}
+    </nav>
 
-  <div class="flex-grow">
-  {#if $character}
-    <Sheet />
-  {/if}
+    <div class="flex-grow">
+    {#if $character}
+      <Sheet />
+    {/if}
+    </div>
   </div>
 </div>
 

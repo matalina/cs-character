@@ -7,7 +7,7 @@
 
 </script>
 
-<div class="mt-2">
+<div class="mt-2 border border-gray-300 p-3 rounded">
   <Row class="border-b border-gray-300 items-center">
     <div class="flex-grow">
       <strong>Ability</strong>

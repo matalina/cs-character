@@ -6,13 +6,13 @@ import { character } from "../../main";
 
 </script>
 
-<div class="md:w-1/2">
-  <Row class="my-2">
-    <div class="uppercase">recovery rolls</div>
+<div class="mt-2 md:w-1/2 border border-gray-300 p-3 rounded">
+  <Row class="flex items-center border-b border-gray-300 mb-1">
+    <div class="uppercase text-sm">recovery rolls</div>
     <div>1d6+{$character.tier}{$character.recoveryAdd > 0?`+${$character.recoveryAdd}`:''}</div>
   </Row>
 
-  <Row wrap class="border border-gray-300 p-3 rounded">
+  <Row wrap class="">
     {#each Object.keys($character.recoveryRoll) as roll}
       <Checkbox value={$character.recoveryRoll[roll]} label={roll}/>
     {/each}

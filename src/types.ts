@@ -39,13 +39,20 @@ export interface Character {
   skills: Skill[];
   abilities: Ability[];
   attacks: Attack[];
-  cyphersLimit: {
+  cypherLimit: {
     base: number;
     add: number;
   }
   cyphers: Cypher[];
   equipment: Equipment[];
   armor: number;
+  money: {
+    i: number;
+    m: number;
+    e: number;
+    v: number;
+    o: number;
+  }
 }
 
 export interface Stat {
@@ -81,16 +88,25 @@ export interface Attack {
     type: string;
   };
   training: string;
-  source: string;
+  eased: boolean;
 }
 
 export interface Cypher {
   name: string;
   level: number;
   description: string;
+  type: string;
 }
 
 export interface Equipment {
   name: string;
   [key: string]: any;
+}
+
+export interface Item {
+  name: string;
+  description: string;
+  source: string;
+  cost: string;
+  level: number;
 }

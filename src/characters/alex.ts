@@ -5,11 +5,12 @@ export const alex = {
   focus: "Codes Magical Apps",
   tier: 1,
   effort: 1,
+  armor: 0,
   xp: {
     game: 0,
   },
   advancement: {
-    pool: true,
+    pool: false,
     edge: false,
     effort: false,
     skill: false,
@@ -18,10 +19,10 @@ export const alex = {
   stats: {
     might: {
       name: "might",
-      pool: 10,
+      pool: 12,
       edge: 0,
       defense: 'p',
-      current: 10,
+      current: 12,
     },
     speed: {
       name: "speed",
@@ -32,10 +33,10 @@ export const alex = {
     },
     intellect: {
       name: "intellect",
-      pool: 10,
-      edge: 0,
-      defense: 'p',
-      current: 10,
+      pool: 18,
+      edge: 1,
+      defense: 't',
+      current: 18,
     },
   },
   recoveryAdd: 0,
@@ -53,70 +54,170 @@ export const alex = {
   },
   skills: [
     {
-      name: "Test skills",
-      description: "just a bunch of junk to print here",
-      source: 'GF, 345',
-      stat: 'i',
+      name: "Light, medium weapons",
+      description: "You have an inability with heavy weapons; your attacks with heavy weapons are hindered",
+      source: 'CSRD',
+      stat: '',
       training: 'p',
-    }
+    },
+    {
+      name: "Heavy weapons",
+      description: "You can use light and medium weapons without penalty",
+      source: 'CSRD',
+      stat: '',
+      training: 'i',
+    },
+    {
+      name: "1",
+      description: "You can use light and medium weapons without penalty",
+      source: 'Knowledge Skills, CSC, 157',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "2",
+      description: "You can use light and medium weapons without penalty",
+      source: 'Knowledge Skills, CSC, 157',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "Deep Thinker",
+      description: "While you are alone, you are trained in all tasks related to figuring out puzzles or problems, memorizing things, or using lore.",
+      source: 'In Translation, 18',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "Inability",
+      description: "After you’ve been in a large group for more than an hour without at least an hour by yourself, all tasks related to pleasant social interaction are hindered.",
+      source: 'In Translation, 18',
+      stat: 'i',
+      training: 'i',
+    },
+    {
+      name: "Cautious",
+      description: "You’re trained in Intellect defense actions. ",
+      source: 'In Translation, 18',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "Persuasive",
+      description: "You’re trained in persuasion",
+      source: 'Psychic',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "Inability",
+      description: "Any task that involves patience, willpower, or discipline is hindered",
+      source: 'Psychic',
+      stat: 'i',
+      training: 'i',
+    },
+    {
+      name: "Magical Programmer",
+      description: "You are trained in crafting magical apps and in using (and exploiting) computer software. You know one or more computer languages well enough to write basic programs, and you are fluent in internet protocol. Enabler.",
+      source: 'It\'s Only Magic, 45',
+      stat: 'i',
+      training: 't',
+    },
+    {
+      name: "Hobbies",
+      description: "You are trained in playing guitar and singing.",
+      source: 'Background',
+      stat: 'i',
+      training: 't',
+    },
   ],
   abilities: [
     {
-      name: "Test ability",
-      description: "just a bunch of junk to print here",
-      source: 'GF, 345',
+      name: "Decipher",
+      description: "If you spend one minute examining a piece of writing or code in a language you do not understand, you can make an Intellect roll of difficulty 3 (or higher, based on the complexity of the language or code) to get the gist of the message. Action to initiate.",
+      source: 'CSC, 126',
+      cost: '1',
+      stat: 'i',
+      training: 'p',
+    },
+    {
+      name: "Hacker",
+      description: "You gain quick access to a desired bit of information in a computer or similar device, or you access one of its primary functions. Action.",
+      source: 'CSC, 147',
+      cost: '2',
+      stat: 'i',
+      training: 'p',
+    },
+    {
+      name: "Datajack",
+      description: "With computer access, you jack in instantly and learn a bit more about something you can see. You get an asset on a task involving that person or object. Action.",
+      source: 'CSC, 124',
+      cost: '1',
+      stat: 'i',
+      training: 'p',
+    },
+    {
+      name: "Telepathic",
+      description: "You can speak telepathically with others who are within short range. Communication is two-way, but the other party must be willing and able to communicate. You don’t have to see the target, but you must know that it’s within range. You can have more than one active contact at once, but you must establish contact with each target individually. Each contact lasts up to ten minutes. If you apply a level of Effort to increase the duration rather than ease the task, the contact lasts for 24 hours. Action to establish contact. ",
+      source: 'CSC, 189',
       cost: '1+',
       stat: 'i',
       training: 'p',
+    },
+  ],
+  attacks: [
+    {
+      name: 'unarmed',
+      cost: 0,
+      stat: 'm',
+      damage: {
+        value: 2,
+        type: 'b'
+      },
+      training: 'p',
+      eased: true,
     }
   ],
-  attacks: [],
   cypherLimit: {
     base: 2,
     add: 0,
   },
   cyphers: [],
-  equipment: [],
-  armor: [],
+  equipment: [
+    {
+      name: 'Appropriate Clothes',
+      description: '',
+      source: '-',
+      level: 3,
+      cost: 'm',
+    },
+    {
+      name: 'Weapon of Choice',
+      description: '',
+      source: '-',
+      level: 3,
+      cost: 'm',
+    },
+    {
+      name: 'Computer',
+      description: '',
+      source: '-',
+      level: 3,
+      cost: 'e',
+    },
+    {
+      name: 'Smart Phone',
+      description: '',
+      source: '-',
+      level: 3,
+      cost: 'e',
+    },
+  ],
+  money: {
+    i: 4,
+    m: 2,
+    e: 2,
+    v: 0,
+    o: 0,
+  }
 }
-
-/*
-export interface Skill {
-  name: string;
-  stat: string;
-  training: string;
-  source: string;
-}
-
-export interface Ability {
-  name: string;
-  description: string;
-  training: string;
-  stat: string;
-  cost: number;
-  source: string;
-}
-
-export interface Attack {
-  name: string;
-  cost: string;
-  stat: string;
-  damage: {
-    value: number;
-    type: string;
-  };
-  training: string;
-  source: string;
-}
-
-export interface Cypher {
-  name: string;
-  level: number;
-  description: string;
-}
-
-export interface Equipment {
-  name: string;
-  [key: string]: any;
-}
-  */

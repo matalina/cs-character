@@ -3,7 +3,6 @@
   import Columns from "./parts/Columns.svelte";
   import Abilitites from "./sheet/Abilitites.svelte";
   import Advancement from "./sheet/Advancement.svelte";
-  import Armor from "./sheet/Armor.svelte";
   import Attacks from "./sheet/Attacks.svelte";
   import Column from "./parts/Column.svelte";
   import Cyphers from "./sheet/Cyphers.svelte";
@@ -25,7 +24,15 @@
         <Row>
           <SingleStat type="tier" value={$character.tier}/>
           <SingleStat type="effort" value={$character.effort}/>
+          <SingleStat type="armor" value={$character.armor}/>
           <SingleStat type="xp" value={$character.xp.game}/>
+          {#if Object.keys($character.xp).length > 1}
+            {#each Object.keys($character.xp) as key}
+              {#if (key !== 'game')}
+              <SingleStat type={key} value={$character.xp[key]}/>
+              {/if}
+            {/each}
+          {/if}
         </Row>
         <Advancement/>
         <Stats />
@@ -34,20 +41,12 @@
           <DamageTrack/>
         </Row>
         <Abilitites/>
+        <Equipment />
       </Column>
     <Column>
-      <Armor/>
       <Attacks />
       <Skills/>
       <Cyphers/>
     </Column>
-  </Columns>
-</Page>
-<Page>
-  <Columns>
-    <Column>
-      <Equipment />
-    </Column>
-    <Column></Column>
   </Columns>
 </Page>

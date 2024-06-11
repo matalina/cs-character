@@ -10,6 +10,6 @@
     {skill.description}
     <span class="italic text-xs"> ({skill.source})</span>
   </div>
-  <div class="w-6 uppercase">{skill.stat}</div>
+  <div class="min-w-6 uppercase text-center">{skill.stat}</div>
   <Training trained={skill.training}/>
 </Row>

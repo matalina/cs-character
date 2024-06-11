@@ -6,9 +6,9 @@
 
 </script>
 
-<div class="md:w-1/2">
-  <div class="uppercase my-2">damage track</div>
-  <Row wrap class="border border-gray-300 p-3 rounded">
+<div class="mt-2 md:w-1/2 border border-gray-300 p-3 rounded">
+  <div class="uppercase border-b border-gray-300 mb-2 text-sm">damage track</div>
+  <Row wrap class="">
     <Checkbox value={$character.damageTrack.hale} label="hale"/>
     <Checkbox value={$character.damageTrack.impared} label="impaired"/>
     <Checkbox value={$character.damageTrack.debilitated} label="debilitated"/>

@@ -10,7 +10,7 @@
     {ability.description}
     <span class="italic text-xs"> ({ability.source})</span>
   </div>
-  <div class="w-6 uppercase">{ability.stat}</div>
-  <div class="w-6">{ability.cost}</div>
+  <div class="min-w-6 uppercase text-center">{ability.stat}</div>
+  <div class="min-w-6 text-center">{ability.cost}</div>
   <Training trained={ability.training}/>
 </Row>
